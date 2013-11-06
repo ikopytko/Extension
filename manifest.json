@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "BZWBK24 Autologin",
+  "description": "Autologin for BZWBK24 allows you to easily login into BZWBK24 account",
+  "version": "0.7",
+  
+  "developer": {
+				"name": "Ivan Kopytko",
+				"url": "https://github.com/minor09"
+			   },
+			   
+	"icons": {
+				"16" : "images/icon16.png",
+				"48" : "images/icon48.png",
+				"128": "images/icon128.png"
+			 },
+	
+  "background": {"scripts": ["background.js"]},
+  
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.centrum24.pl/*"],
+      "js": ["logger.js"]
+    }
+  ]
+}
