@@ -18,10 +18,10 @@ var BZWBK = {
 			if (d[i].getAttribute('name') == "nik") {
 				d[i].setAttribute("value", o_requestLogin);
 				
-			} else if (d[i].getAttribute('id') == "pass0") {
-				for (var j = 1; j < 20; j++) {
-					if (!(d[i+j].getAttribute('disabled') == "true") && o_requestPassword[j-1] != null)
-						d[i+j].setAttribute("value", o_requestPassword[j-1]);
+			} else if (d[i].hasAttribute('name') &&d[i].getAttribute('name') == "loginButton") {
+				for (var j = 22; j > 0; j--) {
+					if (!(d[i-j].getAttribute('disabled') == "true") && o_requestPassword[22-j] != null)
+						d[i-j].setAttribute("value", o_requestPassword[22-j]);
 			}
 			}
 		}
